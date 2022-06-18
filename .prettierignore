@@ -1,0 +1,5 @@
+build/
+artifacts/
+node_modules/
+
+vvs-swap-core/
