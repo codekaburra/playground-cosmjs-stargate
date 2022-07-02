@@ -35,11 +35,12 @@ export const sampleData: {[chainName: string]: ISampleData} = {
     delegatorAddress: "cro14jsw39n2aywkz8c2n487y0747raee7la0sqp56",
     validatorAddress: "crocncl1up7anp4cq0kc799dccgfhesxp0mxklgrpgf856",
   },
-  cronos: {
-    userAddress: "cro1nnem6szhs57lanxqcljw868fyen3ktvwgglad6",
+  evmos: {
+    userAddress: "evmos17xpfvakm2amg962yls6f84z3kell8c5ljcjw34",
     transactionHash: {
+      transfer: "7897BB417582F3E9AED08BB3BDAC6C05AB8A2876D3D854DF4FA08312DAB6EBC9",
     },
-    delegatorAddress: "cro14jsw39n2aywkz8c2n487y0747raee7la0sqp56",
-    validatorAddress: "crocncl1up7anp4cq0kc799dccgfhesxp0mxklgrpgf856",
+    delegatorAddress: "evmos10pcga9su5me3dp5g4jln49uxjq7c9s2ugwt4rp",
+    validatorAddress: "evmosvaloper10pcga9su5me3dp5g4jln49uxjq7c9s2u9qy9zu",
   },
 };

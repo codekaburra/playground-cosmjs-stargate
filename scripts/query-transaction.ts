@@ -4,15 +4,15 @@ import {
   StargateClient,
 } from "@cosmjs/stargate";
 import { IChainInfo } from "../interfaces";
-import { sampleData } from "../const/sample";
+import { sampleData } from "../sample/sample";
 import { IndexedTx } from "@cosmjs/stargate/build/stargateclient";
 import { decodeTxRaw } from "@cosmjs/proto-signing";
 /*
   How to call :
 
-  INPUTS=<transactionHash> FUNCTION=queryTransaction yarn script cosmoshub
-  INPUTS=<transactionHash> FUNCTION=queryTransaction yarn script cryptoorgchain
-  INPUTS=<transactionHash> FUNCTION=queryTransaction yarn script cronos
+  yarn script cosmoshub mainnet queryTransaction AA5B24070C7B36340E377900292737266CC88591246EF664A7851EE0449755FD
+  yarn script cryptoorgchain mainnet queryTransaction DAD56DB82717E8C99A03523ACF5353ABF5B6F434909C5F3C8056643A61033417
+  yarn script evmos mainnet queryTransaction 7897BB417582F3E9AED08BB3BDAC6C05AB8A2876D3D854DF4FA08312DAB6EBC9
 */
 export const queryTransaction = async (inputs: string[], chainInfo: IChainInfo) => {
   const [transactionHash] = inputs;
@@ -41,4 +41,5 @@ export const printIndexedTx = (transaction: IndexedTx | null) => {
       "gasWanted : ", transaction.gasWanted,
       "gasUsed : ", transaction.gasUsed);
   }
+  console.log(JSON.stringify(transaction));
 };

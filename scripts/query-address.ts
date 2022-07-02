@@ -4,14 +4,14 @@ import {
   StargateClient,
 } from "@cosmjs/stargate";
 import { IChainInfo } from "../interfaces";
-import { sampleData } from "../const/sample";
+import { sampleData } from "../sample/sample";
 
 /*
   How to call :
 
-  INPUTS=<address> FUNCTION=queryAddress yarn script cosmoshub
-  INPUTS=<address> FUNCTION=queryAddress yarn script cryptoorgchain
-  INPUTS=<address> FUNCTION=queryAddress yarn script cronos
+  yarn script cosmoshub mainnet queryAddress address
+  yarn script cryptoorgchain mainnet queryAddress address
+  yarn script cronos mainnet queryAddress address
 */
 export const queryAddress = async (inputs: string[], chainInfo: IChainInfo) => {
   const client = await StargateClient.connect(chainInfo.rpcNodeUrl);

@@ -7,9 +7,9 @@ import { Tx, TxBody } from "cosmjs-types/cosmos/tx/v1beta1/tx";
 /*
   How to call :
 
-  INPUTS=<blockNumber> FUNCTION=queryBlock yarn script cosmoshub
-  INPUTS=<blockNumber> FUNCTION=queryBlock yarn script cryptoorgchain
-  INPUTS=<blockNumber> FUNCTION=queryBlock yarn script cronos
+  yarn script cosmoshub mainnet queryBlock blockNumber
+  yarn script cryptoorgchain mainnet queryBlock blockNumber
+  yarn script cronos mainnet queryBlock blockNumber
 */
 export const queryBlock = async (inputs: string[], chainInfo: IChainInfo) => {
   const [blockNumber] = inputs;

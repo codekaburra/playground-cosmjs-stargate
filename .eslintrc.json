@@ -11,6 +11,7 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
+    "array-element-newline": ["error", { "minItems": 3 }],
     "max-len": ["warn", { "code": 150, "ignoreUrls": true }],
     "quotes": ["error", "double", { "avoidEscape": true, "allowTemplateLiterals": false }],
     "semi": [2, "always"],

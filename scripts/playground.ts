@@ -5,7 +5,7 @@ import {
   StargateClient,
 } from "@cosmjs/stargate";
 import { IChainInfo } from "../interfaces";
-import { sampleData } from "../const/sample";
+import { sampleData } from "../sample/sample";
 
 /*
   How to call :
